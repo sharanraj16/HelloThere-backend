@@ -18,6 +18,8 @@ if os.path.exists('env.py'):
     import env
 
 
+DEBUG = 'DEV' in os.environ
+
 CLOUDINARY_STORAGE = {
     'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
 }
@@ -57,7 +59,8 @@ REST_AUTH_SERIALIZERS = {
 
 
 
-DEBUG = 'DEV' in os.environ
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -65,9 +68,9 @@ DEBUG = 'DEV' in os.environ
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'hello-there.herokuapp.com']
 
 
 # Application definition
