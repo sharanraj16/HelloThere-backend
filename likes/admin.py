@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Like  # make sure the Like model is correctly imported
+from .models import Like  
 
 admin.site.register(Like)

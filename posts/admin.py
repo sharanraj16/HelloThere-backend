@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Post  # make sure the model is imported
+from .models import Post  
 
-admin.site.register(Post)  # this makes it show up
+admin.site.register(Post)  
