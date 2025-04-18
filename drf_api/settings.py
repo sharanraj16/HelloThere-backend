@@ -65,9 +65,9 @@ DEBUG = 'DEV' in os.environ
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'hello-there.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -110,15 +110,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
- CORS_ALLOWED_ORIGINS = [
+CORS_ALLOWED_ORIGINS = [
    origin for origin in [
      os.environ.get('CLIENT_ORIGIN'),
      os.environ.get('CLIENT_ORIGIN_DEV')
    ] if origin
  ]
 
- CORS_ALLOW_CREDENTIALS = True
-
+CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = 'drf_api.urls'
 
 TEMPLATES = [
